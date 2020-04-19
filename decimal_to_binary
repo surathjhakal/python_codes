@@ -1,0 +1,13 @@
+
+bin(25)
+def binary_to_decimal(n):
+    number=0
+    c=0
+    new=n[::-1]
+    for j in new:
+        if j=='1':
+            number+=(2**c)
+        c+=1
+    print(number)
+n=input("enter the number of binary")
+binary_to_decimal(n)
