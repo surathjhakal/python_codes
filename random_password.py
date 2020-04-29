@@ -1,8 +1,4 @@
 import random
-def replay():
-    a=input("do you want different password then press y")
-    if a=='y':
-     return True
 def random_password(n,digit,lower,upper,sym):
     password=''
     if n=='' and n<8:
