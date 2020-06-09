@@ -1,23 +1,19 @@
-def anagrams(n1,n2):
-    n1=n1.lower()
-    n1=n1.strip()
-    n2=n2.lower()
-    n2=n2.strip()
-    c=0
-    for i in n1:
-        if i not in n2:
-            c+=1
-            break
-    print(n1)
-    print(n2)
-    if c<1:
-        print("it is a anagram string")
-    else:
-        print("it is not a anagram string")
-def main():
+def anagram(o,n):
+    o=o.replace(' ','')
+    n=n.replace(' ','')
+    for i in o:
+        if i not in n and len(n)<=0:
+            return False
+        else:
+            n=n.replace(i,'',1)
+    if len(n)==0:
+        return True
 
-    n1=input("enter a word ")
-    n2=input("enter another word")
-    anag=anagrams(n1,n2)
-    print(anag)
-main()
+o="old west action"
+n="clint eastwood"
+a=anagram(o,n)
+if a==True:
+    print("It is an anagram")
+else:
+    print("it is not an anagram")
+
