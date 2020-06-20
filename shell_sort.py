@@ -4,10 +4,10 @@ def shell_sort(lis):
         for i in range(gap,len(lis)):
             value=lis[i]
             pos=i
-            while pos>0 and lis[pos-gap]>value:
+            while pos>=0 and lis[pos-gap]>value:
                 lis[pos]=lis[pos-gap]
                 pos-=1
-            lis[pos - gap]=value
+            lis[pos]=value
         gap=gap//2
     print(lis)
 
